@@ -1,5 +1,4 @@
-// as palavras que vão ser usadas no jogo e as suas respectivas dicas
-// palavras baseadas em arquitetura de software, de hardware e de redes de computadores
+{
     "palavras":{
         "0":{
             "palavra":"FIREWALL",
@@ -216,6 +215,6 @@
         "53":{
             "palavra":"COOLER",
             "dica":"Dispositivo usado para resfriar componentes de hardware, como o processador"
-        },
+        }
     }
 }
