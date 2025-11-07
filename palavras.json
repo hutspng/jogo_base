@@ -1,0 +1,221 @@
+// as palavras que vão ser usadas no jogo e as suas respectivas dicas
+// palavras baseadas em arquitetura de software, de hardware e de redes de computadores
+    "palavras":{
+        "0":{
+            "palavra":"FIREWALL",
+            "dica":"Dispositivo de segurança que monitora e controla o tráfego de rede"
+        },
+        "1":{
+            "palavra":"PROXY",
+            "dica":"Servidor que atua como intermediário entre um cliente e outro servidor"
+        },
+        "2":{
+            "palavra":"ROUTER",
+            "dica":"Dispositivo que encaminha pacotes de dados entre redes de computadores"
+        },
+        "3":{
+            "palavra":"VIRTUALIZAÇÃO",
+            "dica":"Tecnologia que permite criar ambientes virtuais independentes em um único hardware"
+        },
+        "4":{
+            "palavra":"LOADBALANCER",
+            "dica":"Dispositivo ou software que distribui cargas de trabalho entre múltiplos servidores"
+        },
+        "5":{
+            "palavra":"SWITCH",
+            "dica":"Dispositivo de rede que conecta dispositivos dentro de uma mesma rede local"
+        },
+        "6":{
+            "palavra":"CLOUD",
+            "dica":"Modelo de computação que oferece recursos e serviços pela internet"
+        },
+        "7":{
+            "palavra":"FIRMWARE",
+            "dica":"Software embutido em hardware que controla suas funções básicas"
+        },
+        "8":{
+            "palavra":"SOFTWARE",
+            "dica":"Conjunto de programas e dados que executam tarefas específicas em um computador"
+        },
+        "9":{
+            "palavra":"HARDWARE",
+            "dica":"Componentes físicos de um computador ou sistema eletrônico"
+        },
+        "10":{
+            "palavra":"BACKUP",
+            "dica":"Cópia de segurança dos dados para prevenção contra perda de informações"
+        },
+        "11":{
+            "palavra":"ENCRIPTAÇÃO",
+            "dica":"Processo de codificação de dados para protegê-los contra acesso não autorizado"
+        },
+        "12":{
+            "palavra":"API",
+            "dica":"Interface que permite a comunicação entre diferentes sistemas ou aplicações"
+        },
+        "13":{
+            "palavra":"CONTÊINER",
+            "dica":"Tecnologia que permite empacotar aplicações e suas dependências em um ambiente isolado"
+        },
+        "14":{
+            "palavra":"DNS",
+            "dica":"Sistema que traduz nomes de domínio em endereços IP"
+        },
+        "15":{
+            "palavra":"LATÊNCIA",
+            "dica":"Tempo que um pacote de dados leva para viajar de um ponto a outro na rede"
+        },
+        "16":{
+            "palavra":"PATCH",
+            "dica":"Atualização de software que corrige vulnerabilidades ou bugs"
+        },
+        "17":{
+            "palavra":"VLAN",
+            "dica":"Rede local virtual que segmenta uma rede física em várias redes lógicas"
+        },
+        "18":{
+            "palavra":"SSH",
+            "dica":"Protocolo de rede que permite a comunicação segura entre computadores"
+        },
+        "19":{
+            "palavra":"TOKEN",
+            "dica":"Dispositivo ou código usado para autenticação de usuários em sistemas"
+        },
+        "20":{
+            "palavra":"BIOS",
+            "dica":"Sistema básico de entrada e saída que inicializa o hardware do computador"
+        },
+        "21":{
+            "palavra":"CACHE",
+            "dica":"Memória de alta velocidade que armazena dados frequentemente acessados"
+        },
+        "22":{
+            "palavra":"DASHBOARD",
+            "dica":"Painel de controle que exibe informações e métricas importantes de um sistema"
+        },
+        "23":{
+            "palavra":"FORK",
+            "dica":"Processo de criação de uma cópia independente de um projeto de software"
+        },
+        "24":{
+            "palavra":"GIT",
+            "dica":"Sistema de controle de versão distribuído usado para gerenciar código-fonte"
+        },
+        "25":{
+            "palavra":"JUMPER",
+            "dica":"Pequeno conector usado para configurar hardware em placas de circuito"
+        },
+        "26":{
+            "palvra":"KERNEL",
+            "dica":"Núcleo do sistema operacional que gerencia recursos e comunicação entre hardware e software"
+        },
+        "27":{
+            "palavra":"LATOP",
+            "dica":"Computador portátil projetado para mobilidade e uso em diferentes locais"
+        },
+        "28":{
+            "palavra":"MODEM",
+            "dica":"Dispositivo que modula e demodula sinais para transmissão de dados pela linha telefônica"
+        },
+        "29":{
+            "palavra":"NODE",
+            "dica":"Ponto de conexão em uma rede que pode enviar, receber ou encaminhar dados"
+        },
+        "30":{
+            "palavra":"OVERCLOCK",
+            "dica":"Técnica de aumentar a velocidade de operação de um componente de hardware além das especificações padrão"
+        },
+        "31":{
+            "palavra":"PING",
+            "dica":"Comando usado para testar a conectividade entre dois dispositivos em uma rede"
+        },
+        "32":{
+            "palavra":"RAID",
+            "dica":"Tecnologia que combina múltiplos discos rígidos para melhorar desempenho ou redundância de dados"
+        },
+        "33":{
+            "palavra":"SSD",
+            "dica":"Dispositivo de armazenamento que utiliza memória flash para maior velocidade e durabilidade"
+        },
+        "34":{
+            "palavra":"TERABYTE",
+            "dica":"Unidade de medida de armazenamento equivalente a 1.024 gigabytes"
+        },
+        "35":{
+            "palavra":"VPN",
+            "dica":"Rede privada virtual que permite conexões seguras através da internet"
+        },
+        "36":{
+            "palavra":"WIFI",
+            "dica":"Tecnologia de rede sem fio que permite a conexão de dispositivos à internet"
+        },
+        "37":{
+            "palavra":"XML",
+            "dica":"Linguagem de marcação usada para armazenar e transportar dados"
+        },
+        "38":{
+            "palavra":"PYTHON",
+            "dica":"Linguagem de programação conhecida por sua simplicidade e versatilidade"
+        },
+        "39":{
+            "palavra":"JAVASCRIPT",
+            "dica":"Linguagem de programação amplamente usada para desenvolvimento web"
+        },
+        "40":{
+            "palavra":"HTML",
+            "dica":"Linguagem de marcação usada para criar páginas web"
+        },
+        "41":{
+            "palavra":"CSS",
+            "dica":"Linguagem usada para descrever a apresentação de documentos HTML"
+        },
+        "42":{
+            "palavra":"SQL",
+            "dica":"Linguagem de consulta usada para gerenciar e manipular bancos de dados relacionais"
+        },
+        "43":{
+            "palavra":"BINÁRIO",
+            "dica":"Sistema de numeração que utiliza apenas dois dígitos: 0 e 1"
+        },
+        "44":{
+            "palavra":"BYTE",
+            "dica":"Unidade básica de armazenamento de dados que geralmente representa um caractere"
+        },
+        "45":{
+            "palavra":"COMPILADOR",
+            "dica":"Programa que traduz código-fonte em código de máquina executável"
+        },
+        "46":{
+            "palavra":"DEBUG",
+            "dica":"Processo de identificar e corrigir erros em um programa de software"
+        },
+        "47":{
+            "palavra":"ETHERNET",
+            "dica":"Tecnologia de rede local que utiliza cabos para conectar dispositivos"
+        },
+        "48":{
+            "palavra":"PENDRIVE",
+            "dica":"Dispositivo portátil de armazenamento de dados que utiliza memória flash"
+        },
+        "49":{
+            "palavra":"PERIFÉRICO",
+            "dica":"Dispositivo externo conectado a um computador para expandir suas funcionalidades"
+        },
+        "50":{
+            "palavra":"PLACA-MÃE",
+            "dica":"Componente principal de um computador que conecta todos os outros componentes"
+        },
+        "51":{
+            "palavra":"PROCESSADOR",
+            "dica":"Unidade central de processamento que executa instruções de programas de computador"
+        },
+        "52":{
+            "palavra":"RAM",
+            "dica":"Memória de acesso aleatório usada para armazenar dados temporariamente enquanto o computador está ligado"
+        },
+        "53":{
+            "palavra":"COOLER",
+            "dica":"Dispositivo usado para resfriar componentes de hardware, como o processador"
+        },
+    }
+}
