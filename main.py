@@ -1,6 +1,9 @@
 from main_ui import MenuInicial
 from PyQt6.QtWidgets import QApplication
+from dificult.dificult_ui import DificultUI
+import dificult.dificult as dificult
 import sys
+
 
 # variaveis globais
 log_counter = 0
@@ -15,7 +18,34 @@ def log(msg):
 # funções chamadas pelos botões
 def bnt_jogar_clicado():
     log("botão jogar clicado")
-    # iniciar o jogo (a implementar)
+    # abrir a janela de seleção de dificuldade e fechar a janela principal
+    global janela
+    try:
+        # criar DificultUI passando callbacks que selecionam a dificuldade
+        def select_difficulty(d):
+            size = dificult.bnt_dificult_escolhida(d)
+            log(f"Dificuldade {d} escolhida -> size={size}")
+            # aqui você pode iniciar o jogo com 'size'
+            # fechar a janela de dificuldade (janela global aponta para ela)
+            
+            global janela
+            if janela is not None:
+                janela.close()
+
+        nova = DificultUI(
+            easy_cb=lambda: select_difficulty(1),
+            medium_cb=lambda: select_difficulty(2),
+            hard_cb=lambda: select_difficulty(3),
+        )
+        nova.show()
+
+        # fecha a janela principal (se existir)
+        if janela is not None:
+            janela.close()
+        janela = nova
+
+    except Exception as e:
+        log(f"falha ao abrir DificultUI: {e}")
 
 def bnt_como_clicar():
     log("botão como jogar clicado")

@@ -1,9 +1,9 @@
-import sys
-from PyQt6.QtWidgets import (QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QMessageBox)
+from PyQt6.QtWidgets import (QWidget, QLabel, QVBoxLayout, QMessageBox)
 from PyQt6.QtGui import QFontDatabase, QFont
 from PyQt6.QtCore import Qt
 import consts as c
 from textwrap import dedent
+from utils.ui import criar_botao
 
 
 class MenuInicial(QWidget):
@@ -56,32 +56,13 @@ class MenuInicial(QWidget):
         layout.addWidget(desc)
 
         # ---------- BOTÕES ----------
-        def criar_botao(texto, func):
-            btn = QPushButton(texto)
-            btn.setFont(font_pixel)
-            btn.setFixedSize(260, 45)
-            btn.clicked.connect(func)
-            btn.setStyleSheet("""
-                QPushButton {
-                    background-color: #ff8c00;
-                    color: black;
-                    border-radius: 20px;
-                    font-size: 18px;
-                }
-                QPushButton:hover {
-                    background-color: #ffa733;
-                }
-            """)
-            return btn
-        
-        # criação e definição dos botões
-        btn_jogar = criar_botao("jogar", jogar_cb if jogar_cb is not None else (lambda: None))
+        btn_jogar = criar_botao("jogar", jogar_cb if jogar_cb is not None else (lambda: None), font_pixel)
         layout.addWidget(btn_jogar, alignment=Qt.AlignmentFlag.AlignCenter)
 
-        btn_como = criar_botao("como jogar?", como_cb if como_cb is not None else self.show_como_jogar)
+        btn_como = criar_botao("como jogar?", como_cb if como_cb is not None else self.show_como_jogar, font_pixel)
         layout.addWidget(btn_como, alignment=Qt.AlignmentFlag.AlignCenter)
 
-        btn_sair = criar_botao("sair", sair_cb if sair_cb is not None else self.close)
+        btn_sair = criar_botao("sair", sair_cb if sair_cb is not None else self.close, font_pixel)
         layout.addWidget(btn_sair, alignment=Qt.AlignmentFlag.AlignCenter)
         
         # CENTRALIZAR O CONTAINER NO MEIO
