@@ -1,8 +1,6 @@
 from consts import EASY_SIZE, MEDIUM_SIZE, HARD_SIZE
 
-
 matriz_size = 0
-
 
 def bnt_dificult_escolhida(dificuldade):
     """Retorna o tamanho da matriz correspondente à dificuldade escolhida.

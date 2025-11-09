@@ -4,6 +4,7 @@ from PyQt6.QtCore import Qt
 import consts as c
 from textwrap import dedent
 from utils.ui import criar_botao
+from consts import log
 
 
 class MenuInicial(QWidget):
@@ -121,17 +122,22 @@ class MenuInicial(QWidget):
     def keyPressEvent(self, event):
         key = event.key()
         if key == Qt.Key.Key_C:
-            # prefere usar callback injetada (para manter separação lógica/ui)
+            #  usa callback injetada (para manter separação lógica/ui)
             if self._como_cb is not None:
                 try:
+                    log("main_ui", "atalho C clicado")
                     self._como_cb()
                 except Exception:
                     # se o callback falhar, mostrar diretamente
+                    log("main_ui", "atalho C clicado")
                     self.show_como_jogar()
+                    
             else:
+                log("main_ui", "atalho C clicado")
                 self.show_como_jogar()
         elif key == Qt.Key.Key_Escape:
             #  ESC volta ao menu
+            log("main_ui", "atalho ESC clicado")
             self.show()
             
         else:

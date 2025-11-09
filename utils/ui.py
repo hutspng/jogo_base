@@ -13,17 +13,17 @@ def criar_botao(texto, func, font_pixel=None):
     btn = QPushButton(texto)
     if font_pixel:
         btn.setFont(font_pixel)
-    btn.setFixedSize(260, 45)
-    btn.clicked.connect(func)
-    btn.setStyleSheet("""
-        QPushButton {
-            background-color: #ff8c00;
-            color: black;
-            border-radius: 20px;
-            font-size: 18px;
-        }
-        QPushButton:hover {
-            background-color: #ffa733;
-        }
-    """)
+        btn.setFixedSize(260, 45)
+        btn.clicked.connect(func)
+        btn.setStyleSheet("""
+            QPushButton {
+                background-color: #ff8c00;
+                color: black;
+                border-radius: 20px;
+                font-size: 18px;
+            }
+            QPushButton:hover {
+                background-color: #ffa733;
+            }
+        """)
     return btn
