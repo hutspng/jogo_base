@@ -5,13 +5,8 @@ import dificult.dificult as dificult
 import sys
 from consts import log
 
-
 # variaveis globais
-
 janela = None  # referência à janela principal
-
-
-
 
 # funções chamadas pelos botões
 def bnt_jogar_clicado():

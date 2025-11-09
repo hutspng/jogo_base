@@ -1,5 +1,5 @@
 # constrantes para fonte
-FONT = "fonts/PressStart2P.ttf"
+FONT_PATH = "fonts/PressStart2P.ttf"
 FONT_PIXEL_BIG_SIZE = 32
 FONT_PIXEL_SIZE = 13
 

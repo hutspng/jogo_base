@@ -1,4 +1,5 @@
 from consts import EASY_SIZE, MEDIUM_SIZE, HARD_SIZE
+from game.game import abrir_jogo
 
 matriz_size = 0
 
@@ -17,5 +18,5 @@ def bnt_dificult_escolhida(dificuldade):
     else:
         matriz_size = MEDIUM_SIZE
 
-    return matriz_size
+    abrir_jogo(matriz_size)
     

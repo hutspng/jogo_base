@@ -4,7 +4,7 @@ from PyQt6.QtCore import Qt
 import consts as c
 from textwrap import dedent
 from utils.ui import criar_botao
-from consts import log
+# from consts import log, FONT_PATH, FONT_PIXEL_BIG_SIZE, FONT_PIXEL_SIZE
 
 
 class MenuInicial(QWidget):
@@ -22,7 +22,7 @@ class MenuInicial(QWidget):
         self.setStyleSheet("background-color: #111018;")
 
         # carregar fonte pixel
-        QFontDatabase.addApplicationFont(c.FONT)
+        QFontDatabase.addApplicationFont(c.FONT_PATH)
         font_pixel_big = QFont("Press Start 2P", c.FONT_PIXEL_BIG_SIZE)
         font_pixel = QFont("Press Start 2P", c.FONT_PIXEL_SIZE)
 
@@ -125,19 +125,19 @@ class MenuInicial(QWidget):
             #  usa callback injetada (para manter separação lógica/ui)
             if self._como_cb is not None:
                 try:
-                    log("main_ui", "atalho C clicado")
+                    c.log("main_ui", "atalho C clicado")
                     self._como_cb()
                 except Exception:
                     # se o callback falhar, mostrar diretamente
-                    log("main_ui", "atalho C clicado")
+                    c.log("main_ui", "atalho C clicado")
                     self.show_como_jogar()
                     
             else:
-                log("main_ui", "atalho C clicado")
+                c.log("main_ui", "atalho C clicado")
                 self.show_como_jogar()
         elif key == Qt.Key.Key_Escape:
             #  ESC volta ao menu
-            log("main_ui", "atalho ESC clicado")
+            c.log("main_ui", "atalho ESC clicado")
             self.show()
             
         else:
