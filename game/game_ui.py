@@ -195,6 +195,7 @@ class TelaJogo(QWidget):
                 self.setFont(font_pixel)
                 self.setAlignment(Qt.AlignmentFlag.AlignCenter)
                 self.setWordWrap(True)
+                self.setMinimumHeight(40)
                 self.setCursor(QCursor(Qt.CursorShape.PointingHandCursor))
                 self.setStyleSheet("""
                     QLabel {
@@ -203,6 +204,7 @@ class TelaJogo(QWidget):
                         border-radius: 8px;
                         padding: 10px;
                         border: 1px solid #3a3a4a;
+                        min-height: 40px;
                     }
                 """)
 

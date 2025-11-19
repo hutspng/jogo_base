@@ -1,10 +1,24 @@
+import os
+import sys
+
+# Detectar se está rodando como executável compilado
+def get_resource_path(relative_path):
+    """Retorna o caminho correto para recursos (funciona com PyInstaller)"""
+    try:
+        # PyInstaller cria uma pasta temporária e armazena o caminho em _MEIPASS
+        base_path = sys._MEIPASS
+    except AttributeError:
+        # Se não for executável, usa o diretório do script
+        base_path = os.path.dirname(os.path.abspath(__file__))
+    return os.path.join(base_path, relative_path)
+
 # constrantes para fonte
-FONT_PATH = "fonts/PressStart2P.ttf"
+FONT_PATH = get_resource_path("fonts/PressStart2P.ttf")
 FONT_PIXEL_BIG_SIZE = 32
 FONT_PIXEL_SIZE = 13
 
 # caminho do arquivo json com as palavras
-PATH_PALAVRAS_JSON = "data/palavras.json"
+PATH_PALAVRAS_JSON = get_resource_path("data/palavras.json")
 
 # tamanhos do tabuleiro conforme dificuldade
 EASY_SIZE = 10

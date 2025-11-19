@@ -3,3 +3,5 @@ BUILD.md
 CacaPalavras.spec
 *__pycache__/
 *.pyc
+build/
+dist/
