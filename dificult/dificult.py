@@ -1,13 +1,10 @@
 from consts import EASY_SIZE, MEDIUM_SIZE, HARD_SIZE
-from game.game import abrir_jogo
 
 matriz_size = 0
 
-def bnt_dificult_escolhida(dificuldade):
-    """Retorna o tamanho da matriz correspondente à dificuldade escolhida.
 
-    Não faz logging ou manipula janelas — isso deve ficar na camada de lógica (main).
-    """
+def bnt_dificult_escolhida(dificuldade):
+    """Retorna o tamanho da matriz baseado na dificuldade escolhida."""
     global matriz_size
     if dificuldade == 1:
         matriz_size = EASY_SIZE
@@ -17,6 +14,6 @@ def bnt_dificult_escolhida(dificuldade):
         matriz_size = HARD_SIZE
     else:
         matriz_size = MEDIUM_SIZE
-
-    abrir_jogo(matriz_size)
+    
+    return matriz_size
     

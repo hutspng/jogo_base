@@ -76,10 +76,14 @@ class MenuInicial(QWidget):
         popup.setWindowTitle("Como Jogar")
         popup.setText(dedent("""
         ➡ ATALHOS
+        Geral:
         ESC - voltar
         C - abrir esta tela
+                             
+        Jogo:
         E - exibe todas as dicas no jogo  
-
+        D - desiste do jogo
+                             
         ➡ Encontre todas as palavras escondidas no quadro.
 
         ➡ As palavras podem estar:
@@ -99,11 +103,16 @@ class MenuInicial(QWidget):
         popup.setStyleSheet("""
             QMessageBox {
                 background-color: #111018;
+            }
+            QMessageBox QLabel {
                 color: white;
                 font-family: 'Press Start 2P';
                 font-size: 14px;
             }
-
+            QLabel {
+                color: white;
+                font-family: 'Press Start 2P';
+            }
             QPushButton {
                 background-color: #ff8c00;
                 color: black;
@@ -111,7 +120,6 @@ class MenuInicial(QWidget):
                 padding: 8px 16px;
                 font-family: 'Press Start 2P';
             }
-
             QPushButton:hover {
                 background-color: #ffa733;
             }

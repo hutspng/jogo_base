@@ -1,0 +1,5 @@
+build_exe.py
+BUILD.md
+CacaPalavras.spec
+*__pycache__/
+*.pyc
