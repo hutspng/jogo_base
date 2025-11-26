@@ -104,7 +104,7 @@ class DificultUI(QWidget):
         # Botão "Voltar" - retorna ao menu principal
         bnt_back = criar_botao(
             "Voltar", 
-            back_cb if back_cb is not None else (lambda: self.close()), 
+            back_cb if back_cb is not None else (lambda: dificult.bnt_voltar_menu(back_cb)), 
             font_pixel
         )
         layout.addWidget(bnt_back, alignment=Qt.AlignmentFlag.AlignCenter)

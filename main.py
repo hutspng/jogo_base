@@ -54,6 +54,7 @@ def bnt_jogar_clicado():
             Args:
                 d (int): Código da dificuldade (1=fácil, 2=médio, 3=difícil)
             """
+            global janela  # Necessário para acessar e modificar a variável global
             # Converter código de dificuldade em tamanho da matriz
             size = dificult.bnt_dificult_escolhida(d)
             log("main", f"Dificuldade {d} escolhida -> size={size}")
@@ -107,11 +108,33 @@ def bnt_jogar_clicado():
                 traceback.print_exc()
                 # Se falhar, não fecha a janela atual para o usuário ver o erro
 
+        # Função para voltar ao menu principal a partir da tela de dificuldade
+        def voltar_ao_menu():
+            """Volta ao menu principal fechando a tela atual e criando nova instância do menu."""
+            global janela
+            try:
+                # Fechar janela atual (tela de dificuldade)
+                if janela is not None:
+                    janela.close()
+                
+                # Recriar menu principal com os mesmos callbacks
+                nova_menu = MenuInicial(
+                    jogar_cb=bnt_jogar_clicado,
+                    como_cb=bnt_como_clicar,
+                    sair_cb=bnt_sair_clicado,
+                )
+                nova_menu.show()
+                janela = nova_menu
+                log("main", "Retorno ao menu principal realizado com sucesso")
+            except Exception as e:
+                log("main", f"Erro ao voltar ao menu: {e}")
+        
         # Criar tela de seleção de dificuldade com callbacks para cada opção
         nova = DificultUI(
             easy_cb=lambda: select_difficulty(1),    # Callback para fácil
             medium_cb=lambda: select_difficulty(2),  # Callback para médio
             hard_cb=lambda: select_difficulty(3),    # Callback para difícil
+            back_cb=voltar_ao_menu,                 # Callback para voltar ao menu
         )
         nova.show()
 

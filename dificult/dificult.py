@@ -13,7 +13,7 @@ Mapeamento de dificuldades:
 - Código 3 (Difícil): Matriz 20x20 (400 células)
 """
 
-from consts import EASY_SIZE, MEDIUM_SIZE, HARD_SIZE
+from consts import EASY_SIZE, MEDIUM_SIZE, HARD_SIZE, log
 
 # Variável global para manter referência do último tamanho selecionado
 # (usado principalmente para debugging/logging)
@@ -58,3 +58,21 @@ def bnt_dificult_escolhida(dificuldade):
     
     return matriz_size
     
+    
+def bnt_voltar_menu(callback=None):
+    """
+    Callback executado quando o botão "Voltar" é clicado na tela de dificuldade.
+    
+    Esta função é responsável por executar a ação de retorno ao menu principal.
+    Se um callback específico for fornecido, o executa; caso contrário, apenas loga.
+    
+    Args:
+        callback (callable, optional): Função a ser executada para voltar ao menu.
+                                     Se None, apenas registra o evento no log.
+    """
+    log("dificult", "Botão 'Voltar' clicado - retornando ao menu principal")
+    
+    if callback is not None and callable(callback):
+        callback()
+    else:
+        log("dificult", "Nenhum callback fornecido para voltar ao menu")
