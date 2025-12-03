@@ -37,7 +37,6 @@ def bnt_jogar_clicado():
     """
     Callback executado quando o botão "jogar" é clicado no menu principal.
     Inicia o fluxo de seleção de dificuldade e posterior início do jogo.
-    
     Fluxo:
     1. Cria e exibe a tela de seleção de dificuldade
     2. Define callbacks para cada nível de dificuldade
